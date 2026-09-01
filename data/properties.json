@@ -1,0 +1,1703 @@
+[
+  {
+    "id": "p1",
+    "title": "Moderne Wohnung in Zürich",
+    "listingType": "buy",
+    "propertyType": "apartment",
+    "price": 630000,
+    "pricePeriod": null,
+    "rooms": 4.5,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 135,
+    "yearBuilt": 1984,
+    "address": {
+      "street": "Sonnenweg 59",
+      "zip": "8001",
+      "city": "Zürich",
+      "canton": "ZH",
+      "lat": 47.3553,
+      "lng": 8.5308
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Zürich. This property offers 4.5 rooms and 135 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Fitted kitchen",
+      "Sauna",
+      "Wine cellar",
+      "Terrace",
+      "Newly renovated"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p1-zürich-1/1200/800",
+      "https://picsum.photos/seed/p1-zürich-2/1200/800",
+      "https://picsum.photos/seed/p1-zürich-3/1200/800",
+      "https://picsum.photos/seed/p1-zürich-4/1200/800",
+      "https://picsum.photos/seed/p1-zürich-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "reserved",
+    "createdAt": "2026-08-25T20:16:46.791Z"
+  },
+  {
+    "id": "p2",
+    "title": "Einfamilienhaus in Genève",
+    "listingType": "buy",
+    "propertyType": "house",
+    "price": 1640000,
+    "pricePeriod": null,
+    "rooms": 5.5,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "livingSpace": 160,
+    "plotSpace": 360,
+    "yearBuilt": 2004,
+    "address": {
+      "street": "Rheinweg 57",
+      "zip": "1201",
+      "city": "Genève",
+      "canton": "GE",
+      "lat": 46.1932,
+      "lng": 6.1189
+    },
+    "description": "Einfamilienhaus located in a sought-after area of Genève. This property offers 5.5 rooms and 160 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the GE region.",
+    "features": [
+      "Swimming pool",
+      "Parking space",
+      "Wine cellar",
+      "Lift",
+      "Garden",
+      "Lake view",
+      "Garage"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p2-genève-1/1200/800",
+      "https://picsum.photos/seed/p2-genève-2/1200/800",
+      "https://picsum.photos/seed/p2-genève-3/1200/800",
+      "https://picsum.photos/seed/p2-genève-4/1200/800",
+      "https://picsum.photos/seed/p2-genève-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-17T20:16:46.791Z"
+  },
+  {
+    "id": "p3",
+    "title": "Exklusive Villa in Lugano",
+    "listingType": "buy",
+    "propertyType": "villa",
+    "price": 5240000,
+    "pricePeriod": null,
+    "rooms": 8.5,
+    "bedrooms": 7,
+    "bathrooms": 3,
+    "livingSpace": 275,
+    "plotSpace": 1170,
+    "yearBuilt": 1979,
+    "address": {
+      "street": "Löwenstrasse 69",
+      "zip": "6900",
+      "city": "Lugano",
+      "canton": "TI",
+      "lat": 46.018,
+      "lng": 8.9739
+    },
+    "description": "Exklusive Villa located in a sought-after area of Lugano. This property offers 8.5 rooms and 275 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the TI region.",
+    "features": [
+      "Garage",
+      "Terrace",
+      "Newly renovated",
+      "Wheelchair accessible",
+      "Wine cellar",
+      "Parking space"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p3-lugano-1/1200/800",
+      "https://picsum.photos/seed/p3-lugano-2/1200/800",
+      "https://picsum.photos/seed/p3-lugano-3/1200/800",
+      "https://picsum.photos/seed/p3-lugano-4/1200/800",
+      "https://picsum.photos/seed/p3-lugano-5/1200/800"
+    ],
+    "agentId": "a3",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-05T20:16:46.791Z"
+  },
+  {
+    "id": "p4",
+    "title": "Gemütliches Chalet in Bern",
+    "listingType": "buy",
+    "propertyType": "chalet",
+    "price": 1800000,
+    "pricePeriod": null,
+    "rooms": 6,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 105,
+    "yearBuilt": 2023,
+    "address": {
+      "street": "Via Nassa 53",
+      "zip": "3011",
+      "city": "Bern",
+      "canton": "BE",
+      "lat": 46.9248,
+      "lng": 7.4437
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Bern. This property offers 6 rooms and 105 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BE region.",
+    "features": [
+      "Solar panels",
+      "Terrace",
+      "Garden",
+      "Pet friendly",
+      "Sauna",
+      "Wine cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p4-bern-1/1200/800",
+      "https://picsum.photos/seed/p4-bern-2/1200/800",
+      "https://picsum.photos/seed/p4-bern-3/1200/800",
+      "https://picsum.photos/seed/p4-bern-4/1200/800",
+      "https://picsum.photos/seed/p4-bern-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-07-27T20:16:46.791Z"
+  },
+  {
+    "id": "p5",
+    "title": "Penthouse mit Panoramablick in Basel",
+    "listingType": "buy",
+    "propertyType": "penthouse",
+    "price": 4530000,
+    "pricePeriod": null,
+    "rooms": 5.5,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "livingSpace": 235,
+    "yearBuilt": 1967,
+    "address": {
+      "street": "Seestrasse 38",
+      "zip": "4051",
+      "city": "Basel",
+      "canton": "BS",
+      "lat": 47.5416,
+      "lng": 7.5965
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of Basel. This property offers 5.5 rooms and 235 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BS region.",
+    "features": [
+      "Swimming pool",
+      "Garden",
+      "Solar panels",
+      "Cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p5-basel-1/1200/800",
+      "https://picsum.photos/seed/p5-basel-2/1200/800",
+      "https://picsum.photos/seed/p5-basel-3/1200/800",
+      "https://picsum.photos/seed/p5-basel-4/1200/800",
+      "https://picsum.photos/seed/p5-basel-5/1200/800"
+    ],
+    "agentId": "a5",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-26T20:16:46.791Z"
+  },
+  {
+    "id": "p6",
+    "title": "Baulandparzelle in Luzern",
+    "listingType": "buy",
+    "propertyType": "land",
+    "price": 1610000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 1520,
+    "address": {
+      "street": "Löwenstrasse 8",
+      "zip": "6003",
+      "city": "Luzern",
+      "canton": "LU",
+      "lat": 47.0662,
+      "lng": 8.327
+    },
+    "description": "Baulandparzelle located in a sought-after area of Luzern. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the LU region.",
+    "features": [
+      "Terrace",
+      "Parking space",
+      "Fitted kitchen",
+      "Garage",
+      "Cellar",
+      "Wheelchair accessible",
+      "Underfloor heating"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p6-luzern-1/1200/800",
+      "https://picsum.photos/seed/p6-luzern-2/1200/800",
+      "https://picsum.photos/seed/p6-luzern-3/1200/800",
+      "https://picsum.photos/seed/p6-luzern-4/1200/800",
+      "https://picsum.photos/seed/p6-luzern-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-31T20:16:46.791Z"
+  },
+  {
+    "id": "p7",
+    "title": "Gewerbefläche in Lausanne",
+    "listingType": "buy",
+    "propertyType": "commercial",
+    "price": 3080000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 170,
+    "yearBuilt": 1976,
+    "address": {
+      "street": "Seefeldstrasse 67",
+      "zip": "1003",
+      "city": "Lausanne",
+      "canton": "VD",
+      "lat": 46.5238,
+      "lng": 6.6495
+    },
+    "description": "Gewerbefläche located in a sought-after area of Lausanne. This property offers 0 rooms and 170 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the VD region.",
+    "features": [
+      "Mountain view",
+      "Solar panels",
+      "Garden",
+      "Fireplace",
+      "Pet friendly",
+      "Lift"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p7-lausanne-1/1200/800",
+      "https://picsum.photos/seed/p7-lausanne-2/1200/800",
+      "https://picsum.photos/seed/p7-lausanne-3/1200/800",
+      "https://picsum.photos/seed/p7-lausanne-4/1200/800",
+      "https://picsum.photos/seed/p7-lausanne-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-29T20:16:46.791Z"
+  },
+  {
+    "id": "p8",
+    "title": "Moderne Wohnung in Zug",
+    "listingType": "buy",
+    "propertyType": "apartment",
+    "price": 955000,
+    "pricePeriod": null,
+    "rooms": 3.5,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "livingSpace": 95,
+    "yearBuilt": 2009,
+    "address": {
+      "street": "Kirchstrasse 98",
+      "zip": "6300",
+      "city": "Zug",
+      "canton": "ZG",
+      "lat": 47.1732,
+      "lng": 8.5371
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Zug. This property offers 3.5 rooms and 95 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZG region.",
+    "features": [
+      "Cellar",
+      "Underfloor heating",
+      "Pet friendly",
+      "Solar panels"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p8-zug-1/1200/800",
+      "https://picsum.photos/seed/p8-zug-2/1200/800",
+      "https://picsum.photos/seed/p8-zug-3/1200/800",
+      "https://picsum.photos/seed/p8-zug-4/1200/800",
+      "https://picsum.photos/seed/p8-zug-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": true,
+    "status": "reserved",
+    "createdAt": "2026-07-14T20:16:46.791Z"
+  },
+  {
+    "id": "p9",
+    "title": "Einfamilienhaus in St. Gallen",
+    "listingType": "buy",
+    "propertyType": "house",
+    "price": 1640000,
+    "pricePeriod": null,
+    "rooms": 6.5,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 200,
+    "plotSpace": 530,
+    "yearBuilt": 1990,
+    "address": {
+      "street": "Marktgasse 13",
+      "zip": "9000",
+      "city": "St. Gallen",
+      "canton": "SG",
+      "lat": 47.4068,
+      "lng": 9.3874
+    },
+    "description": "Einfamilienhaus located in a sought-after area of St. Gallen. This property offers 6.5 rooms and 200 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the SG region.",
+    "features": [
+      "Wheelchair accessible",
+      "Balcony",
+      "Underfloor heating"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p9-st.-gallen-1/1200/800",
+      "https://picsum.photos/seed/p9-st.-gallen-2/1200/800",
+      "https://picsum.photos/seed/p9-st.-gallen-3/1200/800",
+      "https://picsum.photos/seed/p9-st.-gallen-4/1200/800",
+      "https://picsum.photos/seed/p9-st.-gallen-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "reserved",
+    "createdAt": "2026-08-05T20:16:46.791Z"
+  },
+  {
+    "id": "p10",
+    "title": "Exklusive Villa in Winterthur",
+    "listingType": "buy",
+    "propertyType": "villa",
+    "price": 4790000,
+    "pricePeriod": null,
+    "rooms": 7,
+    "bedrooms": 6,
+    "bathrooms": 2,
+    "livingSpace": 285,
+    "plotSpace": 1160,
+    "yearBuilt": 1960,
+    "address": {
+      "street": "Poststrasse 78",
+      "zip": "8400",
+      "city": "Winterthur",
+      "canton": "ZH",
+      "lat": 47.487,
+      "lng": 8.7087
+    },
+    "description": "Exklusive Villa located in a sought-after area of Winterthur. This property offers 7 rooms and 285 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Swimming pool",
+      "Lake view",
+      "Balcony"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p10-winterthur-1/1200/800",
+      "https://picsum.photos/seed/p10-winterthur-2/1200/800",
+      "https://picsum.photos/seed/p10-winterthur-3/1200/800",
+      "https://picsum.photos/seed/p10-winterthur-4/1200/800",
+      "https://picsum.photos/seed/p10-winterthur-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-27T20:16:46.791Z"
+  },
+  {
+    "id": "p11",
+    "title": "Gemütliches Chalet in Montreux",
+    "listingType": "buy",
+    "propertyType": "chalet",
+    "price": 2130000,
+    "pricePeriod": null,
+    "rooms": 5.5,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "livingSpace": 155,
+    "yearBuilt": 1987,
+    "address": {
+      "street": "Alpenblickweg 51",
+      "zip": "1820",
+      "city": "Montreux",
+      "canton": "VD",
+      "lat": 46.4471,
+      "lng": 6.8887
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Montreux. This property offers 5.5 rooms and 155 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the VD region.",
+    "features": [
+      "Lake view",
+      "Garage",
+      "Lift",
+      "Smart home system",
+      "Pet friendly",
+      "Mountain view",
+      "Swimming pool"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p11-montreux-1/1200/800",
+      "https://picsum.photos/seed/p11-montreux-2/1200/800",
+      "https://picsum.photos/seed/p11-montreux-3/1200/800",
+      "https://picsum.photos/seed/p11-montreux-4/1200/800",
+      "https://picsum.photos/seed/p11-montreux-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-25T20:16:46.791Z"
+  },
+  {
+    "id": "p12",
+    "title": "Penthouse mit Panoramablick in Interlaken",
+    "listingType": "buy",
+    "propertyType": "penthouse",
+    "price": 1570000,
+    "pricePeriod": null,
+    "rooms": 6,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 205,
+    "yearBuilt": 2017,
+    "address": {
+      "street": "Alpenblickweg 66",
+      "zip": "3800",
+      "city": "Interlaken",
+      "canton": "BE",
+      "lat": 46.7023,
+      "lng": 7.8798
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of Interlaken. This property offers 6 rooms and 205 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BE region.",
+    "features": [
+      "Wheelchair accessible",
+      "Pet friendly",
+      "Lift",
+      "Garage",
+      "Lake view",
+      "Swimming pool",
+      "Fitted kitchen"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p12-interlaken-1/1200/800",
+      "https://picsum.photos/seed/p12-interlaken-2/1200/800",
+      "https://picsum.photos/seed/p12-interlaken-3/1200/800",
+      "https://picsum.photos/seed/p12-interlaken-4/1200/800",
+      "https://picsum.photos/seed/p12-interlaken-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-23T20:16:46.791Z"
+  },
+  {
+    "id": "p13",
+    "title": "Baulandparzelle in Zürich",
+    "listingType": "buy",
+    "propertyType": "land",
+    "price": 2060000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 830,
+    "address": {
+      "street": "Bahnhofstrasse 61",
+      "zip": "8001",
+      "city": "Zürich",
+      "canton": "ZH",
+      "lat": 47.3647,
+      "lng": 8.5305
+    },
+    "description": "Baulandparzelle located in a sought-after area of Zürich. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Parking space",
+      "Smart home system",
+      "Garage",
+      "Wheelchair accessible",
+      "Lake view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p13-zürich-1/1200/800",
+      "https://picsum.photos/seed/p13-zürich-2/1200/800",
+      "https://picsum.photos/seed/p13-zürich-3/1200/800",
+      "https://picsum.photos/seed/p13-zürich-4/1200/800",
+      "https://picsum.photos/seed/p13-zürich-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-08-04T20:16:46.791Z"
+  },
+  {
+    "id": "p14",
+    "title": "Gewerbefläche in Genève",
+    "listingType": "buy",
+    "propertyType": "commercial",
+    "price": 2390000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 110,
+    "yearBuilt": 1994,
+    "address": {
+      "street": "Grand-Rue 83",
+      "zip": "1201",
+      "city": "Genève",
+      "canton": "GE",
+      "lat": 46.227,
+      "lng": 6.1415
+    },
+    "description": "Gewerbefläche located in a sought-after area of Genève. This property offers 0 rooms and 110 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the GE region.",
+    "features": [
+      "Swimming pool",
+      "Lake view",
+      "Cellar",
+      "Sauna"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p14-genève-1/1200/800",
+      "https://picsum.photos/seed/p14-genève-2/1200/800",
+      "https://picsum.photos/seed/p14-genève-3/1200/800",
+      "https://picsum.photos/seed/p14-genève-4/1200/800",
+      "https://picsum.photos/seed/p14-genève-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-15T20:16:46.791Z"
+  },
+  {
+    "id": "p15",
+    "title": "Moderne Wohnung in Lugano",
+    "listingType": "rent",
+    "propertyType": "apartment",
+    "price": 3350,
+    "pricePeriod": "month",
+    "rooms": 2.5,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "livingSpace": 115,
+    "yearBuilt": 1987,
+    "address": {
+      "street": "Löwenstrasse 36",
+      "zip": "6900",
+      "city": "Lugano",
+      "canton": "TI",
+      "lat": 45.9953,
+      "lng": 8.955
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Lugano. This property offers 2.5 rooms and 115 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the TI region.",
+    "features": [
+      "Fireplace",
+      "Garage",
+      "Underfloor heating",
+      "Smart home system",
+      "Fitted kitchen",
+      "Wine cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p15-lugano-1/1200/800",
+      "https://picsum.photos/seed/p15-lugano-2/1200/800",
+      "https://picsum.photos/seed/p15-lugano-3/1200/800",
+      "https://picsum.photos/seed/p15-lugano-4/1200/800",
+      "https://picsum.photos/seed/p15-lugano-5/1200/800"
+    ],
+    "agentId": "a3",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-07T20:16:46.791Z"
+  },
+  {
+    "id": "p16",
+    "title": "Einfamilienhaus in Bern",
+    "listingType": "rent",
+    "propertyType": "house",
+    "price": 3650,
+    "pricePeriod": "month",
+    "rooms": 6.5,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 235,
+    "plotSpace": 450,
+    "yearBuilt": 1979,
+    "address": {
+      "street": "Grand-Rue 10",
+      "zip": "3011",
+      "city": "Bern",
+      "canton": "BE",
+      "lat": 46.964,
+      "lng": 7.4344
+    },
+    "description": "Einfamilienhaus located in a sought-after area of Bern. This property offers 6.5 rooms and 235 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the BE region.",
+    "features": [
+      "Lake view",
+      "Solar panels",
+      "Garage",
+      "Wheelchair accessible",
+      "Newly renovated",
+      "Cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p16-bern-1/1200/800",
+      "https://picsum.photos/seed/p16-bern-2/1200/800",
+      "https://picsum.photos/seed/p16-bern-3/1200/800",
+      "https://picsum.photos/seed/p16-bern-4/1200/800",
+      "https://picsum.photos/seed/p16-bern-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-25T20:16:46.791Z"
+  },
+  {
+    "id": "p17",
+    "title": "Exklusive Villa in Basel",
+    "listingType": "rent",
+    "propertyType": "villa",
+    "price": 5400,
+    "pricePeriod": "month",
+    "rooms": 8.5,
+    "bedrooms": 7,
+    "bathrooms": 3,
+    "livingSpace": 400,
+    "plotSpace": 890,
+    "yearBuilt": 1979,
+    "address": {
+      "street": "Bahnhofstrasse 100",
+      "zip": "4051",
+      "city": "Basel",
+      "canton": "BS",
+      "lat": 47.5754,
+      "lng": 7.5883
+    },
+    "description": "Exklusive Villa located in a sought-after area of Basel. This property offers 8.5 rooms and 400 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the BS region.",
+    "features": [
+      "Wine cellar",
+      "Balcony",
+      "Sauna",
+      "Solar panels"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p17-basel-1/1200/800",
+      "https://picsum.photos/seed/p17-basel-2/1200/800",
+      "https://picsum.photos/seed/p17-basel-3/1200/800",
+      "https://picsum.photos/seed/p17-basel-4/1200/800",
+      "https://picsum.photos/seed/p17-basel-5/1200/800"
+    ],
+    "agentId": "a5",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-17T20:16:46.792Z"
+  },
+  {
+    "id": "p18",
+    "title": "Gemütliches Chalet in Luzern",
+    "listingType": "rent",
+    "propertyType": "chalet",
+    "price": 2350,
+    "pricePeriod": "month",
+    "rooms": 3.5,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "livingSpace": 165,
+    "yearBuilt": 1997,
+    "address": {
+      "street": "Sonnenweg 19",
+      "zip": "6003",
+      "city": "Luzern",
+      "canton": "LU",
+      "lat": 47.054,
+      "lng": 8.3037
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Luzern. This property offers 3.5 rooms and 165 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the LU region.",
+    "features": [
+      "Garden",
+      "Sauna",
+      "Lake view",
+      "Fireplace",
+      "Underfloor heating"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p18-luzern-1/1200/800",
+      "https://picsum.photos/seed/p18-luzern-2/1200/800",
+      "https://picsum.photos/seed/p18-luzern-3/1200/800",
+      "https://picsum.photos/seed/p18-luzern-4/1200/800",
+      "https://picsum.photos/seed/p18-luzern-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-30T20:16:46.792Z"
+  },
+  {
+    "id": "p19",
+    "title": "Penthouse mit Panoramablick in Lausanne",
+    "listingType": "buy",
+    "propertyType": "penthouse",
+    "price": 2720000,
+    "pricePeriod": null,
+    "rooms": 4.5,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 215,
+    "yearBuilt": 2024,
+    "address": {
+      "street": "Löwenstrasse 74",
+      "zip": "1003",
+      "city": "Lausanne",
+      "canton": "VD",
+      "lat": 46.5288,
+      "lng": 6.6283
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of Lausanne. This property offers 4.5 rooms and 215 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the VD region.",
+    "features": [
+      "Swimming pool",
+      "Balcony",
+      "Underfloor heating",
+      "Garage",
+      "Pet friendly"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p19-lausanne-1/1200/800",
+      "https://picsum.photos/seed/p19-lausanne-2/1200/800",
+      "https://picsum.photos/seed/p19-lausanne-3/1200/800",
+      "https://picsum.photos/seed/p19-lausanne-4/1200/800",
+      "https://picsum.photos/seed/p19-lausanne-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-13T20:16:46.792Z"
+  },
+  {
+    "id": "p20",
+    "title": "Baulandparzelle in Zug",
+    "listingType": "rent",
+    "propertyType": "land",
+    "price": 1900,
+    "pricePeriod": "month",
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 1790,
+    "address": {
+      "street": "Rebbergstrasse 71",
+      "zip": "6300",
+      "city": "Zug",
+      "canton": "ZG",
+      "lat": 47.1474,
+      "lng": 8.5181
+    },
+    "description": "Baulandparzelle located in a sought-after area of Zug. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the ZG region.",
+    "features": [
+      "Garage",
+      "Smart home system",
+      "Balcony"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p20-zug-1/1200/800",
+      "https://picsum.photos/seed/p20-zug-2/1200/800",
+      "https://picsum.photos/seed/p20-zug-3/1200/800",
+      "https://picsum.photos/seed/p20-zug-4/1200/800",
+      "https://picsum.photos/seed/p20-zug-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-08-29T20:16:46.792Z"
+  },
+  {
+    "id": "p21",
+    "title": "Gewerbefläche in St. Gallen",
+    "listingType": "buy",
+    "propertyType": "commercial",
+    "price": 750000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 195,
+    "yearBuilt": 1974,
+    "address": {
+      "street": "Löwenstrasse 1",
+      "zip": "9000",
+      "city": "St. Gallen",
+      "canton": "SG",
+      "lat": 47.4205,
+      "lng": 9.3667
+    },
+    "description": "Gewerbefläche located in a sought-after area of St. Gallen. This property offers 0 rooms and 195 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the SG region.",
+    "features": [
+      "Underfloor heating",
+      "Lake view",
+      "Wine cellar",
+      "Balcony",
+      "Solar panels",
+      "Newly renovated",
+      "Mountain view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p21-st.-gallen-1/1200/800",
+      "https://picsum.photos/seed/p21-st.-gallen-2/1200/800",
+      "https://picsum.photos/seed/p21-st.-gallen-3/1200/800",
+      "https://picsum.photos/seed/p21-st.-gallen-4/1200/800",
+      "https://picsum.photos/seed/p21-st.-gallen-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-01T20:16:46.792Z"
+  },
+  {
+    "id": "p22",
+    "title": "Moderne Wohnung in Winterthur",
+    "listingType": "buy",
+    "propertyType": "apartment",
+    "price": 2085000,
+    "pricePeriod": null,
+    "rooms": 4.5,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 135,
+    "yearBuilt": 1988,
+    "address": {
+      "street": "Rheinweg 117",
+      "zip": "8400",
+      "city": "Winterthur",
+      "canton": "ZH",
+      "lat": 47.4776,
+      "lng": 8.7292
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Winterthur. This property offers 4.5 rooms and 135 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Mountain view",
+      "Smart home system",
+      "Lake view",
+      "Parking space",
+      "Terrace"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p22-winterthur-1/1200/800",
+      "https://picsum.photos/seed/p22-winterthur-2/1200/800",
+      "https://picsum.photos/seed/p22-winterthur-3/1200/800",
+      "https://picsum.photos/seed/p22-winterthur-4/1200/800",
+      "https://picsum.photos/seed/p22-winterthur-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-28T20:16:46.792Z"
+  },
+  {
+    "id": "p23",
+    "title": "Einfamilienhaus in Montreux",
+    "listingType": "buy",
+    "propertyType": "house",
+    "price": 2720000,
+    "pricePeriod": null,
+    "rooms": 5.5,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "livingSpace": 150,
+    "plotSpace": 710,
+    "yearBuilt": 2019,
+    "address": {
+      "street": "Marktgasse 107",
+      "zip": "1820",
+      "city": "Montreux",
+      "canton": "VD",
+      "lat": 46.4411,
+      "lng": 6.8893
+    },
+    "description": "Einfamilienhaus located in a sought-after area of Montreux. This property offers 5.5 rooms and 150 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the VD region.",
+    "features": [
+      "Balcony",
+      "Underfloor heating",
+      "Terrace",
+      "Cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p23-montreux-1/1200/800",
+      "https://picsum.photos/seed/p23-montreux-2/1200/800",
+      "https://picsum.photos/seed/p23-montreux-3/1200/800",
+      "https://picsum.photos/seed/p23-montreux-4/1200/800",
+      "https://picsum.photos/seed/p23-montreux-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-22T20:16:46.792Z"
+  },
+  {
+    "id": "p24",
+    "title": "Exklusive Villa in Interlaken",
+    "listingType": "buy",
+    "propertyType": "villa",
+    "price": 5840000,
+    "pricePeriod": null,
+    "rooms": 8.5,
+    "bedrooms": 7,
+    "bathrooms": 3,
+    "livingSpace": 305,
+    "plotSpace": 700,
+    "yearBuilt": 1987,
+    "address": {
+      "street": "Rue du Rhône 15",
+      "zip": "3800",
+      "city": "Interlaken",
+      "canton": "BE",
+      "lat": 46.6785,
+      "lng": 7.8764
+    },
+    "description": "Exklusive Villa located in a sought-after area of Interlaken. This property offers 8.5 rooms and 305 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BE region.",
+    "features": [
+      "Terrace",
+      "Solar panels",
+      "Lift",
+      "Pet friendly",
+      "Mountain view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p24-interlaken-1/1200/800",
+      "https://picsum.photos/seed/p24-interlaken-2/1200/800",
+      "https://picsum.photos/seed/p24-interlaken-3/1200/800",
+      "https://picsum.photos/seed/p24-interlaken-4/1200/800",
+      "https://picsum.photos/seed/p24-interlaken-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-08-20T20:16:46.792Z"
+  },
+  {
+    "id": "p25",
+    "title": "Gemütliches Chalet in Zürich",
+    "listingType": "buy",
+    "propertyType": "chalet",
+    "price": 1520000,
+    "pricePeriod": null,
+    "rooms": 4,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 190,
+    "yearBuilt": 1962,
+    "address": {
+      "street": "Bahnhofstrasse 28",
+      "zip": "8001",
+      "city": "Zürich",
+      "canton": "ZH",
+      "lat": 47.3962,
+      "lng": 8.554
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Zürich. This property offers 4 rooms and 190 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Parking space",
+      "Fitted kitchen",
+      "Lake view",
+      "Lift",
+      "Garden",
+      "Newly renovated",
+      "Sauna"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p25-zürich-1/1200/800",
+      "https://picsum.photos/seed/p25-zürich-2/1200/800",
+      "https://picsum.photos/seed/p25-zürich-3/1200/800",
+      "https://picsum.photos/seed/p25-zürich-4/1200/800",
+      "https://picsum.photos/seed/p25-zürich-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-02T20:16:46.792Z"
+  },
+  {
+    "id": "p26",
+    "title": "Penthouse mit Panoramablick in Genève",
+    "listingType": "rent",
+    "propertyType": "penthouse",
+    "price": 6450,
+    "pricePeriod": "month",
+    "rooms": 6,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 200,
+    "yearBuilt": 1976,
+    "address": {
+      "street": "Gartenstrasse 98",
+      "zip": "1201",
+      "city": "Genève",
+      "canton": "GE",
+      "lat": 46.1825,
+      "lng": 6.1447
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of Genève. This property offers 6 rooms and 200 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the GE region.",
+    "features": [
+      "Cellar",
+      "Fireplace",
+      "Parking space",
+      "Garden"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p26-genève-1/1200/800",
+      "https://picsum.photos/seed/p26-genève-2/1200/800",
+      "https://picsum.photos/seed/p26-genève-3/1200/800",
+      "https://picsum.photos/seed/p26-genève-4/1200/800",
+      "https://picsum.photos/seed/p26-genève-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-28T20:16:46.792Z"
+  },
+  {
+    "id": "p27",
+    "title": "Baulandparzelle in Lugano",
+    "listingType": "buy",
+    "propertyType": "land",
+    "price": 1780000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 1970,
+    "address": {
+      "street": "Via Nassa 84",
+      "zip": "6900",
+      "city": "Lugano",
+      "canton": "TI",
+      "lat": 46.0083,
+      "lng": 8.9607
+    },
+    "description": "Baulandparzelle located in a sought-after area of Lugano. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the TI region.",
+    "features": [
+      "Terrace",
+      "Fireplace",
+      "Underfloor heating",
+      "Newly renovated",
+      "Balcony",
+      "Parking space"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p27-lugano-1/1200/800",
+      "https://picsum.photos/seed/p27-lugano-2/1200/800",
+      "https://picsum.photos/seed/p27-lugano-3/1200/800",
+      "https://picsum.photos/seed/p27-lugano-4/1200/800",
+      "https://picsum.photos/seed/p27-lugano-5/1200/800"
+    ],
+    "agentId": "a3",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-26T20:16:46.792Z"
+  },
+  {
+    "id": "p28",
+    "title": "Gewerbefläche in Bern",
+    "listingType": "buy",
+    "propertyType": "commercial",
+    "price": 3470000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 360,
+    "yearBuilt": 1986,
+    "address": {
+      "street": "Bahnhofstrasse 51",
+      "zip": "3011",
+      "city": "Bern",
+      "canton": "BE",
+      "lat": 46.9603,
+      "lng": 7.4448
+    },
+    "description": "Gewerbefläche located in a sought-after area of Bern. This property offers 0 rooms and 360 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BE region.",
+    "features": [
+      "Garden",
+      "Lake view",
+      "Pet friendly",
+      "Wine cellar",
+      "Smart home system",
+      "Underfloor heating",
+      "Solar panels"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p28-bern-1/1200/800",
+      "https://picsum.photos/seed/p28-bern-2/1200/800",
+      "https://picsum.photos/seed/p28-bern-3/1200/800",
+      "https://picsum.photos/seed/p28-bern-4/1200/800",
+      "https://picsum.photos/seed/p28-bern-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-07T20:16:46.792Z"
+  },
+  {
+    "id": "p29",
+    "title": "Moderne Wohnung in Basel",
+    "listingType": "rent",
+    "propertyType": "apartment",
+    "price": 4300,
+    "pricePeriod": "month",
+    "rooms": 4,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 60,
+    "yearBuilt": 2019,
+    "address": {
+      "street": "Seefeldstrasse 48",
+      "zip": "4051",
+      "city": "Basel",
+      "canton": "BS",
+      "lat": 47.5833,
+      "lng": 7.6013
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Basel. This property offers 4 rooms and 60 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the BS region.",
+    "features": [
+      "Lift",
+      "Wheelchair accessible",
+      "Cellar",
+      "Swimming pool",
+      "Lake view",
+      "Parking space"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p29-basel-1/1200/800",
+      "https://picsum.photos/seed/p29-basel-2/1200/800",
+      "https://picsum.photos/seed/p29-basel-3/1200/800",
+      "https://picsum.photos/seed/p29-basel-4/1200/800",
+      "https://picsum.photos/seed/p29-basel-5/1200/800"
+    ],
+    "agentId": "a5",
+    "featured": true,
+    "status": "reserved",
+    "createdAt": "2026-07-05T20:16:46.792Z"
+  },
+  {
+    "id": "p30",
+    "title": "Einfamilienhaus in Luzern",
+    "listingType": "buy",
+    "propertyType": "house",
+    "price": 1550000,
+    "pricePeriod": null,
+    "rooms": 4.5,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 165,
+    "plotSpace": 380,
+    "yearBuilt": 1983,
+    "address": {
+      "street": "Seestrasse 63",
+      "zip": "6003",
+      "city": "Luzern",
+      "canton": "LU",
+      "lat": 47.027,
+      "lng": 8.2904
+    },
+    "description": "Einfamilienhaus located in a sought-after area of Luzern. This property offers 4.5 rooms and 165 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the LU region.",
+    "features": [
+      "Newly renovated",
+      "Cellar",
+      "Mountain view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p30-luzern-1/1200/800",
+      "https://picsum.photos/seed/p30-luzern-2/1200/800",
+      "https://picsum.photos/seed/p30-luzern-3/1200/800",
+      "https://picsum.photos/seed/p30-luzern-4/1200/800",
+      "https://picsum.photos/seed/p30-luzern-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-07-06T20:16:46.792Z"
+  },
+  {
+    "id": "p31",
+    "title": "Exklusive Villa in Lausanne",
+    "listingType": "rent",
+    "propertyType": "villa",
+    "price": 6100,
+    "pricePeriod": "month",
+    "rooms": 8.5,
+    "bedrooms": 7,
+    "bathrooms": 3,
+    "livingSpace": 250,
+    "plotSpace": 920,
+    "yearBuilt": 1962,
+    "address": {
+      "street": "Rebbergstrasse 76",
+      "zip": "1003",
+      "city": "Lausanne",
+      "canton": "VD",
+      "lat": 46.5097,
+      "lng": 6.6116
+    },
+    "description": "Exklusive Villa located in a sought-after area of Lausanne. This property offers 8.5 rooms and 250 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the VD region.",
+    "features": [
+      "Terrace",
+      "Fitted kitchen",
+      "Balcony",
+      "Underfloor heating",
+      "Wine cellar",
+      "Garage",
+      "Sauna"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p31-lausanne-1/1200/800",
+      "https://picsum.photos/seed/p31-lausanne-2/1200/800",
+      "https://picsum.photos/seed/p31-lausanne-3/1200/800",
+      "https://picsum.photos/seed/p31-lausanne-4/1200/800",
+      "https://picsum.photos/seed/p31-lausanne-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "sold",
+    "createdAt": "2026-08-12T20:16:46.792Z"
+  },
+  {
+    "id": "p32",
+    "title": "Gemütliches Chalet in Zug",
+    "listingType": "rent",
+    "propertyType": "chalet",
+    "price": 6350,
+    "pricePeriod": "month",
+    "rooms": 4.5,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 95,
+    "yearBuilt": 1991,
+    "address": {
+      "street": "Seestrasse 102",
+      "zip": "6300",
+      "city": "Zug",
+      "canton": "ZG",
+      "lat": 47.177,
+      "lng": 8.5196
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Zug. This property offers 4.5 rooms and 95 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the ZG region.",
+    "features": [
+      "Smart home system",
+      "Garden",
+      "Terrace",
+      "Lift",
+      "Swimming pool",
+      "Sauna"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p32-zug-1/1200/800",
+      "https://picsum.photos/seed/p32-zug-2/1200/800",
+      "https://picsum.photos/seed/p32-zug-3/1200/800",
+      "https://picsum.photos/seed/p32-zug-4/1200/800",
+      "https://picsum.photos/seed/p32-zug-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-21T20:16:46.792Z"
+  },
+  {
+    "id": "p33",
+    "title": "Penthouse mit Panoramablick in St. Gallen",
+    "listingType": "buy",
+    "propertyType": "penthouse",
+    "price": 3860000,
+    "pricePeriod": null,
+    "rooms": 4,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "livingSpace": 210,
+    "yearBuilt": 1965,
+    "address": {
+      "street": "Sonnenweg 105",
+      "zip": "9000",
+      "city": "St. Gallen",
+      "canton": "SG",
+      "lat": 47.412,
+      "lng": 9.3564
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of St. Gallen. This property offers 4 rooms and 210 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the SG region.",
+    "features": [
+      "Swimming pool",
+      "Garage",
+      "Sauna",
+      "Wheelchair accessible",
+      "Fitted kitchen",
+      "Lake view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p33-st.-gallen-1/1200/800",
+      "https://picsum.photos/seed/p33-st.-gallen-2/1200/800",
+      "https://picsum.photos/seed/p33-st.-gallen-3/1200/800",
+      "https://picsum.photos/seed/p33-st.-gallen-4/1200/800",
+      "https://picsum.photos/seed/p33-st.-gallen-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-17T20:16:46.792Z"
+  },
+  {
+    "id": "p34",
+    "title": "Baulandparzelle in Winterthur",
+    "listingType": "buy",
+    "propertyType": "land",
+    "price": 770000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 1440,
+    "address": {
+      "street": "Bahnhofstrasse 59",
+      "zip": "8400",
+      "city": "Winterthur",
+      "canton": "ZH",
+      "lat": 47.5064,
+      "lng": 8.7443
+    },
+    "description": "Baulandparzelle located in a sought-after area of Winterthur. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Mountain view",
+      "Fitted kitchen",
+      "Pet friendly",
+      "Sauna"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p34-winterthur-1/1200/800",
+      "https://picsum.photos/seed/p34-winterthur-2/1200/800",
+      "https://picsum.photos/seed/p34-winterthur-3/1200/800",
+      "https://picsum.photos/seed/p34-winterthur-4/1200/800",
+      "https://picsum.photos/seed/p34-winterthur-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-06T20:16:46.792Z"
+  },
+  {
+    "id": "p35",
+    "title": "Gewerbefläche in Montreux",
+    "listingType": "rent",
+    "propertyType": "commercial",
+    "price": 6150,
+    "pricePeriod": "month",
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 225,
+    "yearBuilt": 2023,
+    "address": {
+      "street": "Rheinweg 47",
+      "zip": "1820",
+      "city": "Montreux",
+      "canton": "VD",
+      "lat": 46.4468,
+      "lng": 6.9342
+    },
+    "description": "Gewerbefläche located in a sought-after area of Montreux. This property offers 0 rooms and 225 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the VD region.",
+    "features": [
+      "Fitted kitchen",
+      "Lift",
+      "Parking space",
+      "Garage",
+      "Cellar",
+      "Lake view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p35-montreux-1/1200/800",
+      "https://picsum.photos/seed/p35-montreux-2/1200/800",
+      "https://picsum.photos/seed/p35-montreux-3/1200/800",
+      "https://picsum.photos/seed/p35-montreux-4/1200/800",
+      "https://picsum.photos/seed/p35-montreux-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-08-20T20:16:46.792Z"
+  },
+  {
+    "id": "p36",
+    "title": "Moderne Wohnung in Interlaken",
+    "listingType": "rent",
+    "propertyType": "apartment",
+    "price": 7200,
+    "pricePeriod": "month",
+    "rooms": 3,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "livingSpace": 120,
+    "yearBuilt": 1989,
+    "address": {
+      "street": "Via Nassa 77",
+      "zip": "3800",
+      "city": "Interlaken",
+      "canton": "BE",
+      "lat": 46.7062,
+      "lng": 7.859
+    },
+    "description": "Moderne Wohnung located in a sought-after area of Interlaken. This property offers 3 rooms and 120 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the BE region.",
+    "features": [
+      "Underfloor heating",
+      "Solar panels",
+      "Wine cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p36-interlaken-1/1200/800",
+      "https://picsum.photos/seed/p36-interlaken-2/1200/800",
+      "https://picsum.photos/seed/p36-interlaken-3/1200/800",
+      "https://picsum.photos/seed/p36-interlaken-4/1200/800",
+      "https://picsum.photos/seed/p36-interlaken-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-23T20:16:46.792Z"
+  },
+  {
+    "id": "p37",
+    "title": "Einfamilienhaus in Zürich",
+    "listingType": "buy",
+    "propertyType": "house",
+    "price": 2490000,
+    "pricePeriod": null,
+    "rooms": 6.5,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 125,
+    "plotSpace": 920,
+    "yearBuilt": 1973,
+    "address": {
+      "street": "Rebbergstrasse 57",
+      "zip": "8001",
+      "city": "Zürich",
+      "canton": "ZH",
+      "lat": 47.3996,
+      "lng": 8.5306
+    },
+    "description": "Einfamilienhaus located in a sought-after area of Zürich. This property offers 6.5 rooms and 125 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the ZH region.",
+    "features": [
+      "Cellar",
+      "Fireplace",
+      "Garden",
+      "Parking space",
+      "Fitted kitchen"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p37-zürich-1/1200/800",
+      "https://picsum.photos/seed/p37-zürich-2/1200/800",
+      "https://picsum.photos/seed/p37-zürich-3/1200/800",
+      "https://picsum.photos/seed/p37-zürich-4/1200/800",
+      "https://picsum.photos/seed/p37-zürich-5/1200/800"
+    ],
+    "agentId": "a1",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-25T20:16:46.792Z"
+  },
+  {
+    "id": "p38",
+    "title": "Exklusive Villa in Genève",
+    "listingType": "buy",
+    "propertyType": "villa",
+    "price": 5170000,
+    "pricePeriod": null,
+    "rooms": 6.5,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "livingSpace": 365,
+    "plotSpace": 660,
+    "yearBuilt": 1964,
+    "address": {
+      "street": "Sonnenweg 65",
+      "zip": "1201",
+      "city": "Genève",
+      "canton": "GE",
+      "lat": 46.2056,
+      "lng": 6.1604
+    },
+    "description": "Exklusive Villa located in a sought-after area of Genève. This property offers 6.5 rooms and 365 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the GE region.",
+    "features": [
+      "Fireplace",
+      "Newly renovated",
+      "Wine cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p38-genève-1/1200/800",
+      "https://picsum.photos/seed/p38-genève-2/1200/800",
+      "https://picsum.photos/seed/p38-genève-3/1200/800",
+      "https://picsum.photos/seed/p38-genève-4/1200/800",
+      "https://picsum.photos/seed/p38-genève-5/1200/800"
+    ],
+    "agentId": "a2",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-01T20:16:46.792Z"
+  },
+  {
+    "id": "p39",
+    "title": "Gemütliches Chalet in Lugano",
+    "listingType": "buy",
+    "propertyType": "chalet",
+    "price": 1550000,
+    "pricePeriod": null,
+    "rooms": 3.5,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "livingSpace": 190,
+    "yearBuilt": 2000,
+    "address": {
+      "street": "Löwenstrasse 16",
+      "zip": "6900",
+      "city": "Lugano",
+      "canton": "TI",
+      "lat": 46.0203,
+      "lng": 8.9279
+    },
+    "description": "Gemütliches Chalet located in a sought-after area of Lugano. This property offers 3.5 rooms and 190 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the TI region.",
+    "features": [
+      "Newly renovated",
+      "Garage",
+      "Cellar",
+      "Lift",
+      "Mountain view",
+      "Underfloor heating"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p39-lugano-1/1200/800",
+      "https://picsum.photos/seed/p39-lugano-2/1200/800",
+      "https://picsum.photos/seed/p39-lugano-3/1200/800",
+      "https://picsum.photos/seed/p39-lugano-4/1200/800",
+      "https://picsum.photos/seed/p39-lugano-5/1200/800"
+    ],
+    "agentId": "a3",
+    "featured": true,
+    "status": "available",
+    "createdAt": "2026-08-24T20:16:46.792Z"
+  },
+  {
+    "id": "p40",
+    "title": "Penthouse mit Panoramablick in Bern",
+    "listingType": "buy",
+    "propertyType": "penthouse",
+    "price": 4790000,
+    "pricePeriod": null,
+    "rooms": 5,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "livingSpace": 175,
+    "yearBuilt": 2003,
+    "address": {
+      "street": "Rebbergstrasse 48",
+      "zip": "3011",
+      "city": "Bern",
+      "canton": "BE",
+      "lat": 46.9487,
+      "lng": 7.4457
+    },
+    "description": "Penthouse mit Panoramablick located in a sought-after area of Bern. This property offers 5 rooms and 175 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the BE region.",
+    "features": [
+      "Parking space",
+      "Swimming pool",
+      "Lake view"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p40-bern-1/1200/800",
+      "https://picsum.photos/seed/p40-bern-2/1200/800",
+      "https://picsum.photos/seed/p40-bern-3/1200/800",
+      "https://picsum.photos/seed/p40-bern-4/1200/800",
+      "https://picsum.photos/seed/p40-bern-5/1200/800"
+    ],
+    "agentId": "a4",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-15T20:16:46.792Z"
+  },
+  {
+    "id": "p41",
+    "title": "Baulandparzelle in Basel",
+    "listingType": "rent",
+    "propertyType": "land",
+    "price": 7250,
+    "pricePeriod": "month",
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 0,
+    "plotSpace": 1000,
+    "address": {
+      "street": "Grand-Rue 57",
+      "zip": "4051",
+      "city": "Basel",
+      "canton": "BS",
+      "lat": 47.5457,
+      "lng": 7.5751
+    },
+    "description": "Baulandparzelle located in a sought-after area of Basel. This property offers excellent building potential, close to public transport, schools and shopping facilities. A great opportunity for tenants looking in the BS region.",
+    "features": [
+      "Balcony",
+      "Smart home system",
+      "Wine cellar",
+      "Fireplace",
+      "Solar panels",
+      "Terrace"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p41-basel-1/1200/800",
+      "https://picsum.photos/seed/p41-basel-2/1200/800",
+      "https://picsum.photos/seed/p41-basel-3/1200/800",
+      "https://picsum.photos/seed/p41-basel-4/1200/800",
+      "https://picsum.photos/seed/p41-basel-5/1200/800"
+    ],
+    "agentId": "a5",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-07-06T20:16:46.792Z"
+  },
+  {
+    "id": "p42",
+    "title": "Gewerbefläche in Luzern",
+    "listingType": "buy",
+    "propertyType": "commercial",
+    "price": 2730000,
+    "pricePeriod": null,
+    "rooms": 0,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "livingSpace": 175,
+    "yearBuilt": 1989,
+    "address": {
+      "street": "Alpenblickweg 59",
+      "zip": "6003",
+      "city": "Luzern",
+      "canton": "LU",
+      "lat": 47.074,
+      "lng": 8.2862
+    },
+    "description": "Gewerbefläche located in a sought-after area of Luzern. This property offers 0 rooms and 175 m² of living space, close to public transport, schools and shopping facilities. A great opportunity for buyers looking in the LU region.",
+    "features": [
+      "Wine cellar",
+      "Sauna",
+      "Garage",
+      "Wheelchair accessible",
+      "Fireplace",
+      "Fitted kitchen",
+      "Cellar"
+    ],
+    "images": [
+      "https://picsum.photos/seed/p42-luzern-1/1200/800",
+      "https://picsum.photos/seed/p42-luzern-2/1200/800",
+      "https://picsum.photos/seed/p42-luzern-3/1200/800",
+      "https://picsum.photos/seed/p42-luzern-4/1200/800",
+      "https://picsum.photos/seed/p42-luzern-5/1200/800"
+    ],
+    "agentId": "a6",
+    "featured": false,
+    "status": "available",
+    "createdAt": "2026-08-05T20:16:46.792Z"
+  }
+]

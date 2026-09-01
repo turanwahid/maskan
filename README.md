@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# newhome demo
 
-## Getting Started
+A demo Swiss real-estate marketplace inspired by [newhome.ch](https://www.newhome.ch), built with Next.js (App Router), TypeScript and Tailwind CSS. Not affiliated with the real newhome.ch — this is a portfolio/demo project with generated sample data.
 
-First, run the development server:
+## Features
+
+- Home page with hero search, category browsing, featured listings and popular cities
+- Listing search with filters (listing type, property type, location, price, rooms), sorting, and grid/map views (Leaflet + OpenStreetMap)
+- Property detail pages with photo gallery, map, agent contact card and similar listings
+- Agent directory and agent profile pages
+- Favorites saved to the browser (localStorage), no account needed
+- Admin area (passcode-protected) to create, edit and delete listings
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) (the dev script runs on port 3001).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Admin
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Go to `/admin` and sign in with the demo passcode `newhome2026` (configurable via the `ADMIN_PASSCODE` env var). From there you can add, edit and delete listings — changes are written to `data/properties.json`.
 
-## Learn More
+## Data
 
-To learn more about Next.js, take a look at the following resources:
+Sample listings live in `data/properties.json` and `data/agents.json`. Regenerate the property set with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+node scripts/gen-properties.mjs
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Images are placeholder photos from picsum.photos; agent avatars from pravatar.cc.

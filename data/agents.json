@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a1",
+    "name": "Laura Meier",
+    "title": "Senior Immobilienmaklerin",
+    "agency": "NewHome Zürich",
+    "photo": "https://i.pravatar.cc/300?img=47",
+    "phone": "+41 44 555 12 01",
+    "email": "laura.meier@newhome.example",
+    "bio": "Laura has 12 years of experience selling residential property across the Zürich metropolitan area, specializing in family homes and new developments."
+  },
+  {
+    "id": "a2",
+    "name": "Marc Dubois",
+    "title": "Directeur des ventes",
+    "agency": "NewHome Genève",
+    "photo": "https://i.pravatar.cc/300?img=12",
+    "phone": "+41 22 555 12 02",
+    "email": "marc.dubois@newhome.example",
+    "bio": "Marc leads the Geneva sales team, focusing on lakeside villas and premium apartments for international clients."
+  },
+  {
+    "id": "a3",
+    "name": "Sofia Rossi",
+    "title": "Immobilienberaterin",
+    "agency": "NewHome Lugano",
+    "photo": "https://i.pravatar.cc/300?img=32",
+    "phone": "+41 91 555 12 03",
+    "email": "sofia.rossi@newhome.example",
+    "bio": "Sofia specializes in Ticino's chalet and villa market, helping buyers find their perfect home near the lakes and mountains."
+  },
+  {
+    "id": "a4",
+    "name": "Thomas Weber",
+    "title": "Immobilienmakler",
+    "agency": "NewHome Bern",
+    "photo": "https://i.pravatar.cc/300?img=53",
+    "phone": "+41 31 555 12 04",
+    "email": "thomas.weber@newhome.example",
+    "bio": "Thomas has deep knowledge of the Bern rental and ownership market, working with both first-time buyers and investors."
+  },
+  {
+    "id": "a5",
+    "name": "Elena Keller",
+    "title": "Verkaufsleiterin",
+    "agency": "NewHome Basel",
+    "photo": "https://i.pravatar.cc/300?img=25",
+    "phone": "+41 61 555 12 05",
+    "email": "elena.keller@newhome.example",
+    "bio": "Elena manages new-build sales in the Basel region, from concept apartments to move-in-ready penthouses."
+  },
+  {
+    "id": "a6",
+    "name": "Nicolas Fischer",
+    "title": "Immobilienberater",
+    "agency": "NewHome Luzern",
+    "photo": "https://i.pravatar.cc/300?img=15",
+    "phone": "+41 41 555 12 06",
+    "email": "nicolas.fischer@newhome.example",
+    "bio": "Nicolas helps clients in Central Switzerland find chalets, houses and apartments with a focus on lakeside living."
+  }
+]
