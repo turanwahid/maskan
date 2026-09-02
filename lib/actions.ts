@@ -4,8 +4,14 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { ADMIN_COOKIE, ADMIN_PASSCODE, isAdmin } from "./auth";
-import { getAgents, getProperties, saveProperties } from "./data";
-import type { Property } from "./types";
+import {
+  getAgents,
+  getProperties,
+  getSubmissions,
+  saveProperties,
+  saveSubmissions,
+} from "./data";
+import type { Property, Submission } from "./types";
 
 export async function loginAdmin(formData: FormData) {
   const passcode = String(formData.get("passcode") ?? "");
@@ -114,4 +120,42 @@ export async function deleteProperty(formData: FormData) {
   revalidatePath("/admin");
   revalidatePath("/listings");
   revalidatePath("/");
+}
+
+export async function submitPropertyListing(formData: FormData) {
+  const num = (key: string) => Number(formData.get(key) ?? 0);
+  const str = (key: string) => String(formData.get(key) ?? "").trim();
+
+  const submission: Submission = {
+    id: `s${Date.now()}`,
+    ownerName: str("ownerName"),
+    ownerEmail: str("ownerEmail"),
+    ownerPhone: str("ownerPhone"),
+    listingType: str("listingType") as Submission["listingType"],
+    propertyType: str("propertyType") as Submission["propertyType"],
+    price: num("price"),
+    rooms: num("rooms"),
+    livingSpace: num("livingSpace"),
+    address: {
+      street: str("street"),
+      zip: str("zip"),
+      city: str("city"),
+      canton: str("canton"),
+    },
+    description: str("description"),
+    createdAt: new Date().toISOString(),
+  };
+
+  const submissions = await getSubmissions();
+  await saveSubmissions([submission, ...submissions]);
+  revalidatePath("/admin");
+  redirect("/list-property?success=1");
+}
+
+export async function dismissSubmission(formData: FormData) {
+  if (!(await isAdmin())) throw new Error("Unauthorized");
+  const id = String(formData.get("id"));
+  const submissions = await getSubmissions();
+  await saveSubmissions(submissions.filter((s) => s.id !== id));
+  revalidatePath("/admin");
 }

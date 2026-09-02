@@ -41,6 +41,26 @@ export interface Property {
   createdAt: string;
 }
 
+export interface Submission {
+  id: string;
+  ownerName: string;
+  ownerEmail: string;
+  ownerPhone: string;
+  listingType: ListingType;
+  propertyType: PropertyType;
+  price: number;
+  rooms: number;
+  livingSpace: number;
+  address: {
+    street: string;
+    zip: string;
+    city: string;
+    canton: string;
+  };
+  description: string;
+  createdAt: string;
+}
+
 export interface Agent {
   id: string;
   name: string;

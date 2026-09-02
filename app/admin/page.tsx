@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { Lock, Pencil, Plus, Trash2 } from "lucide-react";
+import { Lock, Pencil, Plus, Trash2, X } from "lucide-react";
 import { isAdmin } from "@/lib/auth";
-import { loginAdmin, logoutAdmin, deleteProperty } from "@/lib/actions";
-import { getProperties } from "@/lib/data";
+import {
+  loginAdmin,
+  logoutAdmin,
+  deleteProperty,
+  dismissSubmission,
+} from "@/lib/actions";
+import { getProperties, getSubmissions } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 
 export const metadata = { title: "Admin | maskan demo" };
@@ -55,6 +60,9 @@ export default async function AdminPage({
   }
 
   const properties = (await getProperties()).sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
+  const submissions = (await getSubmissions()).sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );
 
@@ -133,6 +141,79 @@ export default async function AdminPage({
                           className="flex items-center gap-1 rounded-md border border-red-200 px-2.5 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50"
                         >
                           <Trash2 size={13} /> Delete
+                        </button>
+                      </form>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900">
+              Property submissions
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              {submissions.length} pending from owners via the &quot;List
+              your property&quot; page
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white">
+          <table className="w-full text-left text-sm">
+            <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+              <tr>
+                <th className="px-4 py-3">Owner</th>
+                <th className="px-4 py-3">Contact</th>
+                <th className="px-4 py-3">Property</th>
+                <th className="px-4 py-3">Location</th>
+                <th className="px-4 py-3">Price</th>
+                <th className="px-4 py-3 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {submissions.length === 0 && (
+                <tr>
+                  <td
+                    colSpan={6}
+                    className="px-4 py-6 text-center text-slate-400"
+                  >
+                    No submissions yet.
+                  </td>
+                </tr>
+              )}
+              {submissions.map((s) => (
+                <tr key={s.id} className="border-b border-slate-100 last:border-0">
+                  <td className="px-4 py-3 font-medium text-slate-900">
+                    {s.ownerName}
+                  </td>
+                  <td className="px-4 py-3 text-slate-600">
+                    <div>{s.ownerEmail}</div>
+                    <div>{s.ownerPhone}</div>
+                  </td>
+                  <td className="px-4 py-3 capitalize text-slate-600">
+                    {s.propertyType} · {s.listingType}
+                  </td>
+                  <td className="px-4 py-3 text-slate-600">
+                    {s.address.street}, {s.address.zip} {s.address.city},{" "}
+                    {s.address.canton}
+                  </td>
+                  <td className="px-4 py-3 text-slate-600">
+                    {formatPrice(s.price, s.listingType === "rent" ? "month" : null)}
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="flex justify-end gap-2">
+                      <form action={dismissSubmission}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <button
+                          type="submit"
+                          className="flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
+                        >
+                          <X size={13} /> Dismiss
                         </button>
                       </form>
                     </div>
