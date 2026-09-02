@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import { LayoutGrid, MapIcon } from "lucide-react";
 import type { Property } from "@/lib/types";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { t } from "@/lib/i18n/format";
 import FiltersSidebar, { type Filters } from "./FiltersSidebar";
 import PropertyCard from "./PropertyCard";
 import MapViewClient from "./MapViewClient";
@@ -10,9 +12,11 @@ import MapViewClient from "./MapViewClient";
 export default function ListingsExplorer({
   properties,
   initialFilters,
+  dict,
 }: {
   properties: Property[];
   initialFilters: Filters;
+  dict: Dictionary;
 }) {
   const [filters, setFilters] = useState<Filters>(initialFilters);
   const [view, setView] = useState<"grid" | "map">("grid");
@@ -54,6 +58,7 @@ export default function ListingsExplorer({
       <aside className="lg:sticky lg:top-20 lg:self-start">
         <FiltersSidebar
           filters={filters}
+          dict={{ ...dict.listings.filters, propertyTypes: dict.hero.propertyTypes }}
           onChange={(next) => setFilters((f) => ({ ...f, ...next }))}
           onReset={() =>
             setFilters({
@@ -71,10 +76,7 @@ export default function ListingsExplorer({
       <div>
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-slate-600">
-            <span className="font-semibold text-slate-900">
-              {filtered.length}
-            </span>{" "}
-            properties found
+            {t(dict.listings.foundCount, { n: filtered.length })}
           </p>
 
           <div className="flex items-center gap-2">
@@ -83,9 +85,9 @@ export default function ListingsExplorer({
               onChange={(e) => setSort(e.target.value as typeof sort)}
               className="rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
             >
-              <option value="newest">Newest</option>
-              <option value="price-asc">Price: low to high</option>
-              <option value="price-desc">Price: high to low</option>
+              <option value="newest">{dict.listings.sortNewest}</option>
+              <option value="price-asc">{dict.listings.sortPriceAsc}</option>
+              <option value="price-desc">{dict.listings.sortPriceDesc}</option>
             </select>
 
             <div className="flex overflow-hidden rounded-lg border border-slate-200">
@@ -98,7 +100,7 @@ export default function ListingsExplorer({
                     : "bg-white text-slate-600 hover:bg-slate-50"
                 }`}
               >
-                <LayoutGrid size={15} /> Grid
+                <LayoutGrid size={15} /> {dict.listings.grid}
               </button>
               <button
                 type="button"
@@ -109,7 +111,7 @@ export default function ListingsExplorer({
                     : "bg-white text-slate-600 hover:bg-slate-50"
                 }`}
               >
-                <MapIcon size={15} /> Map
+                <MapIcon size={15} /> {dict.listings.map}
               </button>
             </div>
           </div>
@@ -117,15 +119,17 @@ export default function ListingsExplorer({
 
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-300 py-20 text-center">
-            <p className="font-semibold text-slate-700">No properties found</p>
+            <p className="font-semibold text-slate-700">
+              {dict.listings.noResults}
+            </p>
             <p className="mt-1 text-sm text-slate-500">
-              Try adjusting your filters to see more results.
+              {dict.listings.noResultsSub}
             </p>
           </div>
         ) : view === "grid" ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {filtered.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard key={property.id} property={property} dict={dict.card} />
             ))}
           </div>
         ) : (

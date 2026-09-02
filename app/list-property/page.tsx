@@ -1,32 +1,29 @@
 import { CheckCircle2 } from "lucide-react";
 import { submitPropertyListing } from "@/lib/actions";
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
 
 export const metadata = { title: "List your property | maskan demo" };
 
 export default async function ListPropertyPage({
   searchParams,
 }: PageProps<"/list-property">) {
-  const params = await searchParams;
+  const [params, locale] = await Promise.all([searchParams, getLocale()]);
   const success = params.success === "1";
+  const fullDict = dictionaries[locale];
+  const dict = fullDict.listProperty;
+  const types = fullDict.hero.propertyTypes;
 
   return (
     <div className="bg-slate-50 py-8">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-bold text-slate-900">
-          List your property
-        </h1>
-        <p className="mt-1 text-sm text-slate-500">
-          Tell us about your property and one of our agents will get back to
-          you to prepare it for listing.
-        </p>
+        <h1 className="text-2xl font-bold text-slate-900">{dict.title}</h1>
+        <p className="mt-1 text-sm text-slate-500">{dict.subtitle}</p>
 
         {success && (
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800">
             <CheckCircle2 size={18} className="mt-0.5 shrink-0" />
-            <p>
-              Thanks! We&apos;ve received your submission and an agent will
-              be in touch shortly.
-            </p>
+            <p>{dict.successMessage}</p>
           </div>
         )}
 
@@ -37,7 +34,7 @@ export default async function ListPropertyPage({
           >
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Your name
+                {dict.ownerName}
               </label>
               <input
                 name="ownerName"
@@ -48,7 +45,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Email
+                {dict.email}
               </label>
               <input
                 type="email"
@@ -60,7 +57,7 @@ export default async function ListPropertyPage({
 
             <div className="sm:col-span-2">
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Phone
+                {dict.phone}
               </label>
               <input
                 type="tel"
@@ -72,40 +69,40 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Listing type
+                {dict.listingType}
               </label>
               <select
                 name="listingType"
                 defaultValue="buy"
                 className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
               >
-                <option value="buy">Sell</option>
-                <option value="rent">Rent out</option>
+                <option value="buy">{dict.sell}</option>
+                <option value="rent">{dict.rentOut}</option>
               </select>
             </div>
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Property type
+                {dict.propertyType}
               </label>
               <select
                 name="propertyType"
                 defaultValue="apartment"
                 className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
               >
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-                <option value="villa">Villa</option>
-                <option value="chalet">Chalet</option>
-                <option value="penthouse">Penthouse</option>
-                <option value="land">Land</option>
-                <option value="commercial">Commercial</option>
+                <option value="apartment">{types.apartment}</option>
+                <option value="house">{types.house}</option>
+                <option value="villa">{types.villa}</option>
+                <option value="chalet">{types.chalet}</option>
+                <option value="penthouse">{types.penthouse}</option>
+                <option value="land">{types.land}</option>
+                <option value="commercial">{types.commercial}</option>
               </select>
             </div>
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Asking price (CHF)
+                {dict.askingPrice}
               </label>
               <input
                 type="number"
@@ -118,7 +115,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Rooms
+                {dict.rooms}
               </label>
               <input
                 type="number"
@@ -131,7 +128,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Living space (m²)
+                {dict.livingSpace}
               </label>
               <input
                 type="number"
@@ -143,7 +140,7 @@ export default async function ListPropertyPage({
 
             <div className="sm:col-span-2">
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Street & number
+                {dict.street}
               </label>
               <input
                 name="street"
@@ -154,7 +151,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                ZIP
+                {dict.zip}
               </label>
               <input
                 name="zip"
@@ -165,7 +162,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                City
+                {dict.city}
               </label>
               <input
                 name="city"
@@ -176,7 +173,7 @@ export default async function ListPropertyPage({
 
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Canton
+                {dict.canton}
               </label>
               <input
                 name="canton"
@@ -187,13 +184,13 @@ export default async function ListPropertyPage({
 
             <div className="sm:col-span-2">
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Description
+                {dict.description}
               </label>
               <textarea
                 name="description"
                 rows={4}
                 required
-                placeholder="Tell us more about the property..."
+                placeholder={dict.descriptionPlaceholder}
                 className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
               />
             </div>
@@ -203,7 +200,7 @@ export default async function ListPropertyPage({
                 type="submit"
                 className="rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark"
               >
-                Submit property
+                {dict.submit}
               </button>
             </div>
           </form>

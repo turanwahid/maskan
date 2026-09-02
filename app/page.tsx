@@ -3,20 +3,26 @@ import { Building2, Home as HomeIcon, TreePine, Warehouse } from "lucide-react";
 import HeroSearch from "@/components/HeroSearch";
 import PropertyCard from "@/components/PropertyCard";
 import { getProperties } from "@/lib/data";
-
-const categories = [
-  { type: "apartment", label: "Apartments", icon: Building2 },
-  { type: "house", label: "Houses", icon: HomeIcon },
-  { type: "chalet", label: "Chalets", icon: TreePine },
-  { type: "commercial", label: "Commercial", icon: Warehouse },
-];
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
 
 export default async function Home() {
-  const properties = await getProperties();
+  const [properties, locale] = await Promise.all([
+    getProperties(),
+    getLocale(),
+  ]);
+  const dict = dictionaries[locale];
   const featured = properties.filter((p) => p.featured).slice(0, 6);
   const cities = Array.from(
     new Set(properties.map((p) => p.address.city))
   ).slice(0, 8);
+
+  const categories = [
+    { type: "apartment", label: dict.home.categories.apartments, icon: Building2 },
+    { type: "house", label: dict.home.categories.houses, icon: HomeIcon },
+    { type: "chalet", label: dict.home.categories.chalets, icon: TreePine },
+    { type: "commercial", label: dict.home.categories.commercial, icon: Warehouse },
+  ];
 
   return (
     <div className="flex flex-col">
@@ -31,19 +37,18 @@ export default async function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand/70 to-brand/40" />
         <div className="relative z-10 flex w-full flex-col items-center gap-6 text-center">
           <h1 className="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            Find your next home in Switzerland
+            {dict.home.heroTitle}
           </h1>
           <p className="max-w-xl text-base text-slate-200 sm:text-lg">
-            Thousands of apartments, houses and villas for sale and rent —
-            search the whole of Switzerland in one place.
+            {dict.home.heroSubtitle}
           </p>
-          <HeroSearch />
+          <HeroSearch dict={dict.hero} />
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
-          Browse by category
+          {dict.home.browseCategory}
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {categories.map(({ type, label, icon: Icon }) => (
@@ -65,18 +70,18 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
-              Featured listings
+              {dict.home.featuredListings}
             </h2>
             <Link
               href="/listings"
               className="text-sm font-semibold text-brand hover:underline"
             >
-              View all listings →
+              {dict.home.viewAll}
             </Link>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard key={property.id} property={property} dict={dict.card} />
             ))}
           </div>
         </div>
@@ -84,7 +89,7 @@ export default async function Home() {
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
-          Popular cities
+          {dict.home.popularCities}
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {cities.map((city) => (
@@ -113,17 +118,14 @@ export default async function Home() {
       <section className="bg-brand-dark py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">
-            Are you an estate agent?
+            {dict.home.agentCta.title}
           </h2>
-          <p className="max-w-xl text-slate-300">
-            List your properties on maskan and reach thousands of buyers and
-            tenants across Switzerland.
-          </p>
+          <p className="max-w-xl text-slate-300">{dict.home.agentCta.subtitle}</p>
           <Link
             href="/admin"
             className="rounded-lg bg-accent px-6 py-3 font-semibold text-white transition hover:bg-accent-dark"
           >
-            List a property
+            {dict.home.agentCta.button}
           </Link>
         </div>
       </section>

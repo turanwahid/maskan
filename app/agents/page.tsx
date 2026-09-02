@@ -2,23 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { getAgents, getProperties } from "@/lib/data";
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
+import { t } from "@/lib/i18n/format";
 
 export const metadata = { title: "Our agents | maskan demo" };
 
 export default async function AgentsPage() {
-  const [agents, properties] = await Promise.all([
+  const [agents, properties, locale] = await Promise.all([
     getAgents(),
     getProperties(),
+    getLocale(),
   ]);
+  const dict = dictionaries[locale];
 
   return (
     <div className="bg-slate-50 py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-bold text-slate-900">Our agents</h1>
-        <p className="mt-1 text-sm text-slate-500">
-          Local experts across Switzerland ready to help you buy, sell or
-          rent.
-        </p>
+        <h1 className="text-2xl font-bold text-slate-900">{dict.agents.title}</h1>
+        <p className="mt-1 text-sm text-slate-500">{dict.agents.subtitle}</p>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {agents.map((agent) => {
@@ -48,20 +50,20 @@ export default async function AgentsPage() {
                 <p className="-mt-2 text-sm text-slate-500">{agent.title}</p>
                 <p className="text-xs text-slate-400">{agent.agency}</p>
                 <p className="text-xs font-medium text-brand">
-                  {count} active listing{count === 1 ? "" : "s"}
+                  {t(dict.agents.activeListing, { n: count })}
                 </p>
                 <div className="mt-2 flex w-full gap-2">
                   <a
                     href={`tel:${agent.phone}`}
                     className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
                   >
-                    <Phone size={14} /> Call
+                    <Phone size={14} /> {dict.agents.call}
                   </a>
                   <a
                     href={`mailto:${agent.email}`}
                     className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
                   >
-                    <Mail size={14} /> Email
+                    <Mail size={14} /> {dict.agents.email}
                   </a>
                 </div>
               </div>

@@ -3,15 +3,21 @@ import Link from "next/link";
 import { BedDouble, MapPin, Ruler, Bath } from "lucide-react";
 import type { Property } from "@/lib/types";
 import { formatArea, formatPrice } from "@/lib/format";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 import FavoriteButton from "./FavoriteButton";
 
-const statusLabel: Record<Property["status"], string> = {
-  available: "",
-  reserved: "Reserved",
-  sold: "Sold",
-};
-
-export default function PropertyCard({ property }: { property: Property }) {
+export default function PropertyCard({
+  property,
+  dict,
+}: {
+  property: Property;
+  dict: Dictionary["card"];
+}) {
+  const statusLabel: Record<Property["status"], string> = {
+    available: "",
+    reserved: dict.reserved,
+    sold: dict.sold,
+  };
   const badge = statusLabel[property.status];
 
   return (
@@ -29,7 +35,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         />
         <div className="absolute left-3 top-3 flex gap-2">
           <span className="rounded-md bg-brand px-2.5 py-1 text-xs font-semibold text-white shadow">
-            {property.listingType === "buy" ? "For sale" : "For rent"}
+            {property.listingType === "buy" ? dict.forSale : dict.forRent}
           </span>
           {badge && (
             <span className="rounded-md bg-slate-900/80 px-2.5 py-1 text-xs font-semibold text-white shadow">
@@ -55,7 +61,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         <div className="mt-auto flex items-center gap-4 border-t border-slate-100 pt-3 text-sm text-slate-600">
           {property.rooms > 0 && (
             <span className="flex items-center gap-1">
-              <BedDouble size={15} /> {property.rooms} rooms
+              <BedDouble size={15} /> {property.rooms} {dict.rooms}
             </span>
           )}
           {property.bathrooms > 0 && (

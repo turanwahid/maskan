@@ -19,13 +19,17 @@ import Gallery from "@/components/Gallery";
 import FavoriteButton from "@/components/FavoriteButton";
 import PropertyCard from "@/components/PropertyCard";
 import MapViewClient from "@/components/MapViewClient";
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
+import { t } from "@/lib/i18n/format";
 
 export default async function PropertyDetailPage({
   params,
 }: PageProps<"/listings/[id]">) {
   const { id } = await params;
-  const property = await getProperty(id);
+  const [property, locale] = await Promise.all([getProperty(id), getLocale()]);
   if (!property) notFound();
+  const dict = dictionaries[locale];
 
   const agent = await getAgent(property.agentId);
   const allProperties = await getProperties();
@@ -39,10 +43,13 @@ export default async function PropertyDetailPage({
     .slice(0, 3);
 
   const stats = [
-    property.rooms > 0 && { icon: BedDouble, label: `${property.rooms} rooms` },
+    property.rooms > 0 && {
+      icon: BedDouble,
+      label: `${property.rooms} ${dict.card.rooms}`,
+    },
     property.bathrooms > 0 && {
       icon: Bath,
-      label: `${property.bathrooms} bathrooms`,
+      label: `${property.bathrooms} ${dict.propertyDetail.bathrooms}`,
     },
     property.livingSpace > 0 && {
       icon: Ruler,
@@ -50,9 +57,12 @@ export default async function PropertyDetailPage({
     },
     property.plotSpace && {
       icon: LandPlot,
-      label: `${formatArea(property.plotSpace)} plot`,
+      label: `${formatArea(property.plotSpace)} ${dict.propertyDetail.plot}`,
     },
-    property.yearBuilt && { icon: Calendar, label: `Built ${property.yearBuilt}` },
+    property.yearBuilt && {
+      icon: Calendar,
+      label: t(dict.propertyDetail.built, { year: property.yearBuilt }),
+    },
   ].filter(Boolean) as { icon: typeof BedDouble; label: string }[];
 
   return (
@@ -62,7 +72,7 @@ export default async function PropertyDetailPage({
           href="/listings"
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-brand"
         >
-          <ArrowLeft size={16} /> Back to search
+          <ArrowLeft size={16} /> {dict.propertyDetail.backToSearch}
         </Link>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_360px]">
@@ -74,11 +84,15 @@ export default async function PropertyDetailPage({
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="rounded-md bg-brand px-2.5 py-1 text-xs font-semibold text-white">
-                      {property.listingType === "buy" ? "For sale" : "For rent"}
+                      {property.listingType === "buy"
+                        ? dict.card.forSale
+                        : dict.card.forRent}
                     </span>
                     {property.status !== "available" && (
                       <span className="rounded-md bg-slate-900 px-2.5 py-1 text-xs font-semibold text-white capitalize">
-                        {property.status}
+                        {property.status === "reserved"
+                          ? dict.card.reserved
+                          : dict.card.sold}
                       </span>
                     )}
                   </div>
@@ -111,7 +125,7 @@ export default async function PropertyDetailPage({
 
             <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
               <h2 className="mb-3 text-lg font-semibold text-slate-900">
-                Description
+                {dict.propertyDetail.description}
               </h2>
               <p className="text-sm leading-relaxed text-slate-600">
                 {property.description}
@@ -121,7 +135,7 @@ export default async function PropertyDetailPage({
             {property.features.length > 0 && (
               <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
                 <h2 className="mb-3 text-lg font-semibold text-slate-900">
-                  Features
+                  {dict.propertyDetail.features}
                 </h2>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {property.features.map((f) => (
@@ -136,7 +150,7 @@ export default async function PropertyDetailPage({
 
             <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
               <h2 className="mb-3 text-lg font-semibold text-slate-900">
-                Location
+                {dict.propertyDetail.location}
               </h2>
               <div className="h-80 overflow-hidden rounded-lg">
                 <MapViewClient properties={[property]} />
@@ -148,7 +162,7 @@ export default async function PropertyDetailPage({
             {agent && (
               <div className="rounded-xl border border-slate-200 bg-white p-6">
                 <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                  Listing agent
+                  {dict.propertyDetail.listingAgent}
                 </h2>
                 <div className="flex items-center gap-3">
                   <div className="relative h-14 w-14 overflow-hidden rounded-full bg-slate-200">
@@ -184,7 +198,7 @@ export default async function PropertyDetailPage({
                     )}`}
                     className="flex items-center justify-center gap-2 rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
                   >
-                    <Mail size={15} /> Email agent
+                    <Mail size={15} /> {dict.propertyDetail.emailAgent}
                   </a>
                 </div>
               </div>
@@ -192,30 +206,32 @@ export default async function PropertyDetailPage({
 
             <div className="rounded-xl border border-slate-200 bg-white p-6">
               <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                Request more information
+                {dict.propertyDetail.requestInfo}
               </h2>
               <form className="flex flex-col gap-3" action={`mailto:${agent?.email ?? ""}`}>
                 <input
                   required
-                  placeholder="Your name"
+                  placeholder={dict.propertyDetail.yourName}
                   className="rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
                 />
                 <input
                   required
                   type="email"
-                  placeholder="Your email"
+                  placeholder={dict.propertyDetail.yourEmail}
                   className="rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
                 />
                 <textarea
                   rows={3}
-                  placeholder={`I'm interested in ${property.title}...`}
+                  placeholder={t(dict.propertyDetail.messagePlaceholder, {
+                    title: property.title,
+                  })}
                   className="rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand"
                 />
                 <button
                   type="submit"
                   className="rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark"
                 >
-                  Send message
+                  {dict.propertyDetail.sendMessage}
                 </button>
               </form>
             </div>
@@ -225,11 +241,11 @@ export default async function PropertyDetailPage({
         {similar.length > 0 && (
           <div className="mt-12">
             <h2 className="mb-4 text-xl font-bold text-slate-900">
-              Similar properties
+              {dict.propertyDetail.similarProperties}
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {similar.map((p) => (
-                <PropertyCard key={p.id} property={p} />
+                <PropertyCard key={p.id} property={p} dict={dict.card} />
               ))}
             </div>
           </div>

@@ -9,14 +9,21 @@ import {
 } from "@/lib/actions";
 import { getProperties, getSubmissions } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
+import { t } from "@/lib/i18n/format";
 
 export const metadata = { title: "Admin | maskan demo" };
 
 export default async function AdminPage({
   searchParams,
 }: PageProps<"/admin">) {
-  const params = await searchParams;
-  const admin = await isAdmin();
+  const [params, admin, locale] = await Promise.all([
+    searchParams,
+    isAdmin(),
+    getLocale(),
+  ]);
+  const dict = dictionaries[locale].admin;
 
   if (!admin) {
     return (
@@ -26,33 +33,33 @@ export default async function AdminPage({
             <Lock size={20} />
           </div>
           <h1 className="mt-4 text-center text-lg font-bold text-slate-900">
-            Agent login
+            {dict.login}
           </h1>
           <p className="mt-1 text-center text-sm text-slate-500">
-            Enter the admin passcode to manage listings.
+            {dict.loginSubtitle}
           </p>
           <form action={loginAdmin} className="mt-6 flex flex-col gap-3">
             <input
               type="password"
               name="passcode"
               required
-              placeholder="Passcode"
+              placeholder={dict.passcode}
               className="rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand"
             />
             <button
               type="submit"
               className="rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark"
             >
-              Sign in
+              {dict.signIn}
             </button>
           </form>
           {params.error && (
             <p className="mt-3 text-center text-sm text-red-600">
-              Incorrect passcode. Try again.
+              {dict.signInError}
             </p>
           )}
           <p className="mt-4 text-center text-xs text-slate-400">
-            Demo passcode: maskan2026
+            {dict.demoPasscode}
           </p>
         </div>
       </div>
@@ -72,10 +79,10 @@ export default async function AdminPage({
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-2xl font-bold text-slate-900">
-              Listings management
+              {dict.listingsManagement}
             </h1>
             <p className="mt-1 text-sm text-slate-500">
-              {properties.length} properties total
+              {t(dict.propertiesTotal, { n: properties.length })}
             </p>
           </div>
           <div className="flex gap-2">
@@ -83,14 +90,14 @@ export default async function AdminPage({
               href="/admin/new"
               className="flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark"
             >
-              <Plus size={16} /> Add listing
+              <Plus size={16} /> {dict.addListing}
             </Link>
             <form action={logoutAdmin}>
               <button
                 type="submit"
                 className="rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
               >
-                Sign out
+                {dict.signOut}
               </button>
             </form>
           </div>
@@ -100,12 +107,12 @@ export default async function AdminPage({
           <table className="w-full text-left text-sm">
             <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
               <tr>
-                <th className="px-4 py-3">Title</th>
-                <th className="px-4 py-3">Location</th>
-                <th className="px-4 py-3">Type</th>
-                <th className="px-4 py-3">Price</th>
-                <th className="px-4 py-3">Status</th>
-                <th className="px-4 py-3 text-right">Actions</th>
+                <th className="px-4 py-3">{dict.title}</th>
+                <th className="px-4 py-3">{dict.location}</th>
+                <th className="px-4 py-3">{dict.type}</th>
+                <th className="px-4 py-3">{dict.price}</th>
+                <th className="px-4 py-3">{dict.status}</th>
+                <th className="px-4 py-3 text-right">{dict.actions}</th>
               </tr>
             </thead>
             <tbody>
@@ -132,7 +139,7 @@ export default async function AdminPage({
                         href={`/admin/${p.id}/edit`}
                         className="flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
                       >
-                        <Pencil size={13} /> Edit
+                        <Pencil size={13} /> {dict.edit}
                       </Link>
                       <form action={deleteProperty}>
                         <input type="hidden" name="id" value={p.id} />
@@ -140,7 +147,7 @@ export default async function AdminPage({
                           type="submit"
                           className="flex items-center gap-1 rounded-md border border-red-200 px-2.5 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50"
                         >
-                          <Trash2 size={13} /> Delete
+                          <Trash2 size={13} /> {dict.delete}
                         </button>
                       </form>
                     </div>
@@ -154,11 +161,10 @@ export default async function AdminPage({
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-xl font-bold text-slate-900">
-              Property submissions
+              {dict.propertySubmissions}
             </h2>
             <p className="mt-1 text-sm text-slate-500">
-              {submissions.length} pending from owners via the &quot;List
-              your property&quot; page
+              {t(dict.submissionsCount, { n: submissions.length })}
             </p>
           </div>
         </div>
@@ -167,12 +173,12 @@ export default async function AdminPage({
           <table className="w-full text-left text-sm">
             <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
               <tr>
-                <th className="px-4 py-3">Owner</th>
-                <th className="px-4 py-3">Contact</th>
-                <th className="px-4 py-3">Property</th>
-                <th className="px-4 py-3">Location</th>
-                <th className="px-4 py-3">Price</th>
-                <th className="px-4 py-3 text-right">Actions</th>
+                <th className="px-4 py-3">{dict.owner}</th>
+                <th className="px-4 py-3">{dict.contact}</th>
+                <th className="px-4 py-3">{dict.property}</th>
+                <th className="px-4 py-3">{dict.location}</th>
+                <th className="px-4 py-3">{dict.price}</th>
+                <th className="px-4 py-3 text-right">{dict.actions}</th>
               </tr>
             </thead>
             <tbody>
@@ -182,7 +188,7 @@ export default async function AdminPage({
                     colSpan={6}
                     className="px-4 py-6 text-center text-slate-400"
                   >
-                    No submissions yet.
+                    {dict.noSubmissions}
                   </td>
                 </tr>
               )}
@@ -213,7 +219,7 @@ export default async function AdminPage({
                           type="submit"
                           className="flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
                         >
-                          <X size={13} /> Dismiss
+                          <X size={13} /> {dict.dismiss}
                         </button>
                       </form>
                     </div>

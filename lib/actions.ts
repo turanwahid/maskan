@@ -12,6 +12,17 @@ import {
   saveSubmissions,
 } from "./data";
 import type { Property, Submission } from "./types";
+import { LOCALE_COOKIE } from "./i18n/get-locale";
+import type { Locale } from "./i18n/config";
+
+export async function setLocale(locale: Locale) {
+  const store = await cookies();
+  store.set(LOCALE_COOKIE, locale, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 365,
+  });
+  revalidatePath("/", "layout");
+}
 
 export async function loginAdmin(formData: FormData) {
   const passcode = String(formData.get("passcode") ?? "");

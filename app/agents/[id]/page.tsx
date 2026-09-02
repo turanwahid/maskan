@@ -4,13 +4,17 @@ import { ArrowLeft, Mail, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
 import { getAgent, getProperties } from "@/lib/data";
 import PropertyCard from "@/components/PropertyCard";
+import { getLocale } from "@/lib/i18n/get-locale";
+import { dictionaries } from "@/lib/i18n/dictionaries";
+import { t } from "@/lib/i18n/format";
 
 export default async function AgentDetailPage({
   params,
 }: PageProps<"/agents/[id]">) {
   const { id } = await params;
-  const agent = await getAgent(id);
+  const [agent, locale] = await Promise.all([getAgent(id), getLocale()]);
   if (!agent) notFound();
+  const dict = dictionaries[locale];
 
   const properties = (await getProperties()).filter(
     (p) => p.agentId === agent.id
@@ -23,7 +27,7 @@ export default async function AgentDetailPage({
           href="/agents"
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-brand"
         >
-          <ArrowLeft size={16} /> Back to agents
+          <ArrowLeft size={16} /> {dict.agentDetail.back}
         </Link>
 
         <div className="flex flex-col items-center gap-4 rounded-xl border border-slate-200 bg-white p-8 text-center sm:flex-row sm:text-left">
@@ -60,14 +64,17 @@ export default async function AgentDetailPage({
         </div>
 
         <h2 className="mb-4 mt-10 text-xl font-bold text-slate-900">
-          Listings by {agent.name} ({properties.length})
+          {t(dict.agentDetail.listingsBy, {
+            name: agent.name,
+            count: properties.length,
+          })}
         </h2>
         {properties.length === 0 ? (
-          <p className="text-sm text-slate-500">No active listings right now.</p>
+          <p className="text-sm text-slate-500">{dict.agentDetail.noListings}</p>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {properties.map((p) => (
-              <PropertyCard key={p.id} property={p} />
+              <PropertyCard key={p.id} property={p} dict={dict.card} />
             ))}
           </div>
         )}

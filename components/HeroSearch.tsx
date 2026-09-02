@@ -3,8 +3,9 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Search } from "lucide-react";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 
-export default function HeroSearch() {
+export default function HeroSearch({ dict }: { dict: Dictionary["hero"] }) {
   const router = useRouter();
   const [listingType, setListingType] = useState<"buy" | "rent">("buy");
   const [location, setLocation] = useState("");
@@ -33,7 +34,7 @@ export default function HeroSearch() {
                 : "text-slate-600 hover:bg-slate-100"
             }`}
           >
-            {t === "buy" ? "Buy" : "Rent"}
+            {t === "buy" ? dict.buy : dict.rent}
           </button>
         ))}
       </div>
@@ -44,7 +45,7 @@ export default function HeroSearch() {
         <input
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          placeholder="City, canton or ZIP code (e.g. Zürich)"
+          placeholder={dict.locationPlaceholder}
           className="flex-1 rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none focus:border-brand"
         />
         <select
@@ -52,21 +53,21 @@ export default function HeroSearch() {
           onChange={(e) => setPropertyType(e.target.value)}
           className="rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none focus:border-brand sm:w-48"
         >
-          <option value="">All property types</option>
-          <option value="apartment">Apartment</option>
-          <option value="house">House</option>
-          <option value="villa">Villa</option>
-          <option value="chalet">Chalet</option>
-          <option value="penthouse">Penthouse</option>
-          <option value="land">Land</option>
-          <option value="commercial">Commercial</option>
+          <option value="">{dict.allTypes}</option>
+          <option value="apartment">{dict.propertyTypes.apartment}</option>
+          <option value="house">{dict.propertyTypes.house}</option>
+          <option value="villa">{dict.propertyTypes.villa}</option>
+          <option value="chalet">{dict.propertyTypes.chalet}</option>
+          <option value="penthouse">{dict.propertyTypes.penthouse}</option>
+          <option value="land">{dict.propertyTypes.land}</option>
+          <option value="commercial">{dict.propertyTypes.commercial}</option>
         </select>
         <button
           type="submit"
           className="flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-dark"
         >
           <Search size={16} />
-          Search
+          {dict.search}
         </button>
       </form>
     </div>
