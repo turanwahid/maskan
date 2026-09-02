@@ -24,7 +24,7 @@ export default function Header() {
             <Home size={18} />
           </span>
           <span className="text-lg font-bold tracking-tight">
-            new<span className="text-accent">home</span>
+            mas<span className="text-accent">kan</span>
           </span>
         </Link>
 

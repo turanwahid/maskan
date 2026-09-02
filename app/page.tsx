@@ -25,7 +25,7 @@ export default async function Home() {
           className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
             backgroundImage:
-              "url(https://picsum.photos/seed/newhome-hero/1600/900)",
+              "url(https://picsum.photos/seed/maskan-hero/1600/900)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand/70 to-brand/40" />
@@ -116,7 +116,7 @@ export default async function Home() {
             Are you an estate agent?
           </h2>
           <p className="max-w-xl text-slate-300">
-            List your properties on newhome and reach thousands of buyers and
+            List your properties on maskan and reach thousands of buyers and
             tenants across Switzerland.
           </p>
           <Link

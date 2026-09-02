@@ -5,7 +5,7 @@ import { loginAdmin, logoutAdmin, deleteProperty } from "@/lib/actions";
 import { getProperties } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 
-export const metadata = { title: "Admin | newhome demo" };
+export const metadata = { title: "Admin | maskan demo" };
 
 export default async function AdminPage({
   searchParams,
@@ -47,7 +47,7 @@ export default async function AdminPage({
             </p>
           )}
           <p className="mt-4 text-center text-xs text-slate-400">
-            Demo passcode: newhome2026
+            Demo passcode: maskan2026
           </p>
         </div>
       </div>

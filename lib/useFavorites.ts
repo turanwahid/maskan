@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const STORAGE_KEY = "newhome_favorites";
+const STORAGE_KEY = "maskan_favorites";
 
 function readStorage(): string[] {
   if (typeof window === "undefined") return [];

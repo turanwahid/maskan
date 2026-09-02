@@ -1,6 +1,6 @@
-# newhome demo
+# maskan demo
 
-A demo Swiss real-estate marketplace inspired by [newhome.ch](https://www.newhome.ch), built with Next.js (App Router), TypeScript and Tailwind CSS. Not affiliated with the real newhome.ch — this is a portfolio/demo project with generated sample data.
+A demo Swiss real-estate marketplace inspired by [maskan.ch](https://www.maskan.ch), built with Next.js (App Router), TypeScript and Tailwind CSS. Not affiliated with the real maskan.ch — this is a portfolio/demo project with generated sample data.
 
 ## Features
 
@@ -22,7 +22,7 @@ Open [http://localhost:3001](http://localhost:3001) (the dev script runs on port
 
 ## Admin
 
-Go to `/admin` and sign in with the demo passcode `newhome2026` (configurable via the `ADMIN_PASSCODE` env var). From there you can add, edit and delete listings — changes are written to `data/properties.json`.
+Go to `/admin` and sign in with the demo passcode `maskan2026` (configurable via the `ADMIN_PASSCODE` env var). From there you can add, edit and delete listings — changes are written to `data/properties.json`.
 
 ## Data
 

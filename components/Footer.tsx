@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="col-span-2 md:col-span-1">
           <span className="text-lg font-bold text-white">
-            new<span className="text-accent">home</span>
+mas<span className="text-accent">kan</span>
           </span>
           <p className="mt-3 text-sm text-slate-400">
             Switzerland&apos;s marketplace for buying and renting apartments,
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-slate-500 sm:px-6 lg:px-8">
-        This is a demo project inspired by newhome.ch — not affiliated with the real newhome.ch. © {new Date().getFullYear()} newhome demo.
+        This is a demo project inspired by maskan.ch — not affiliated with the real maskan.ch. © {new Date().getFullYear()} maskan demo.
       </div>
     </footer>
   );

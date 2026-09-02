@@ -6,7 +6,7 @@ import { getAgents } from "@/lib/data";
 import { createProperty } from "@/lib/actions";
 import PropertyForm from "@/components/PropertyForm";
 
-export const metadata = { title: "Add listing | newhome demo" };
+export const metadata = { title: "Add listing | maskan demo" };
 
 export default async function NewListingPage() {
   if (!(await isAdmin())) redirect("/admin");

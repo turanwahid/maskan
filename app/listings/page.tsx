@@ -3,7 +3,7 @@ import ListingsExplorer from "@/components/ListingsExplorer";
 import type { ListingType, PropertyType } from "@/lib/types";
 
 export const metadata = {
-  title: "Search listings | newhome demo",
+  title: "Search listings | maskan demo",
 };
 
 export default async function ListingsPage({

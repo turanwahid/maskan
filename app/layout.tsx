@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "newhome demo | Buy & rent property in Switzerland",
+  title: "maskan demo | Buy & rent property in Switzerland",
   description:
     "A demo real estate marketplace for buying and renting apartments, houses and villas across Switzerland.",
 };

@@ -1,7 +1,7 @@
 import { getProperties } from "@/lib/data";
 import FavoritesList from "@/components/FavoritesList";
 
-export const metadata = { title: "Saved listings | newhome demo" };
+export const metadata = { title: "Saved listings | maskan demo" };
 
 export default async function FavoritesPage() {
   const properties = await getProperties();

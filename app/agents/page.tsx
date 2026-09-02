@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { getAgents, getProperties } from "@/lib/data";
 
-export const metadata = { title: "Our agents | newhome demo" };
+export const metadata = { title: "Our agents | maskan demo" };
 
 export default async function AgentsPage() {
   const [agents, properties] = await Promise.all([
